@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
+import '../styles/products.scss';
 
-
-const Products = () => {
+const Products = (): JSX.Element => {
     const[dataProd,setDataProd] = useState<any[]>([]);
 
     useEffect(() => {
@@ -15,9 +15,9 @@ const Products = () => {
     },[])
 
     return ( 
-        <div>{dataProd.map(prod => (
-            <div key={prod.id}>
-                <img src={`https://mercadosocial.socialtec.net.br${prod.midia_list[3]}`} />
+        <div className="prod">{dataProd.map(prod => (
+            <div key={prod.id} className="prod-content">
+                <div className="image"></div>
                 <div>{prod.nome}</div>
                 <div>{prod.preco}</div>
                 </div>

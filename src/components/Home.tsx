@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import Products from "./Products";
 import '../styles/home.scss'
 
-const Home = () => {
+
+const Home = (): JSX.Element => {
   const [dataCat, setDataCat] = useState<any[]>([]);
 
   useEffect(() => {
@@ -16,12 +17,12 @@ const Home = () => {
 
   return (
     <div className="container">
-      <div className="menu-container">
-        <nav>
+      <div >
+        <nav >
           <h1>Categorias</h1>
-          <ul>
+          <ul className="menu-container">
             {dataCat.map((cat) => (
-              <li key={cat.id}>{cat.nome}</li>
+              <li className="categories" key={cat.id}>{cat.nome}</li>
             ))}
           </ul>
         </nav>

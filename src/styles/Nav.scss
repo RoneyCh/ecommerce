@@ -1,0 +1,14 @@
+.heading {
+    padding: 2rem;
+    background-color: rgb(228, 97, 97);
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.5rem; 
+    a {
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+}
