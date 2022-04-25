@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { RouteComponentProps } from '@reach/router';
-import Home from './components/Home';
+import Categories from './components/Categories';
 import Products from './components/Products'; 
 import { Nav } from './components/Nav';
 
@@ -10,7 +10,7 @@ export const Router:React.FunctionComponent<RouteComponentProps> = (props) => {
         <BrowserRouter>
             <Nav />
             <Routes>          
-                <Route path='/' element={<Home />}/>
+                <Route path='categorias' element={<Categories />}/>
                 <Route path='produtos' element={<Products />}/>
             </Routes>
         </BrowserRouter>

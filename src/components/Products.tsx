@@ -1,6 +1,7 @@
 import { RouteComponentProps } from "@reach/router";
 import React, { useEffect, useState } from "react";
 import '../styles/products.scss';
+import { ProductsPage } from "../pages/productsPage";
 
 export const Products:React.FunctionComponent<RouteComponentProps> = (props) => {
     const[dataProd,setDataProd] = useState<any[]>([]);
@@ -16,13 +17,7 @@ export const Products:React.FunctionComponent<RouteComponentProps> = (props) => 
     },[])
 
     return ( 
-        <div className="prod">{dataProd.map(prod => (
-            <div key={prod.id} className="prod-content">
-                <div className="image"></div>
-                <div>{prod.nome}</div>
-                <div>{prod.preco}</div>
-                </div>
-        ))}</div>
+        <ProductsPage dataProd={dataProd}/>
         
     );
 };

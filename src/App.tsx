@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from './components/Home';
+import Home from './components/Categories';
 import './styles/app.scss'
 import { Router } from './router';
 

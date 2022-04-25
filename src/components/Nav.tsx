@@ -10,7 +10,7 @@ export const Nav:React.FunctionComponent<RouteComponentProps> = (props) =>{
             <input placeholder='O que está procurando?' type="text" />
             <div>
                 <Link to={'/'}>Home</Link>
-                <Link to={'/'}>Categorias</Link>
+                <Link to={'/categorias'}>Categorias</Link>
                 <Link to={'/produtos'}>Produtos</Link>
             </div>
         </header>
