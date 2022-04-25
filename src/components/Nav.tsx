@@ -1,13 +1,18 @@
+import { RouteComponentProps } from '@reach/router'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-export function Nav() : JSX.Element {
+export const Nav:React.FunctionComponent<RouteComponentProps> = (props) =>{
 
   return (
     <div>
         <header className='heading'>
-            <a>Home</a>
-            <a>Categorias</a>
-            <a>Produtos</a>
+            <input placeholder='O que está procurando?' type="text" />
+            <div>
+                <Link to={'/'}>Home</Link>
+                <Link to={'/'}>Categorias</Link>
+                <Link to={'/produtos'}>Produtos</Link>
+            </div>
         </header>
     </div>
     

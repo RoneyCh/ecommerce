@@ -1,13 +1,12 @@
 import React from 'react';
 import Home from './components/Home';
 import './styles/app.scss'
-import { Nav } from './components/Nav';
+import { Router } from './router';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <Nav />
-      <Home />
+      <Router />
     </div> 
   );
 }

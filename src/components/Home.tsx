@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Products from "./Products";
 import '../styles/home.scss'
+import { RouteComponentProps } from "@reach/router";
 
 
-const Home = (): JSX.Element => {
+const Home:React.FunctionComponent<RouteComponentProps> = (props) => {
   const [dataCat, setDataCat] = useState<any[]>([]);
 
   useEffect(() => {
@@ -28,7 +29,7 @@ const Home = (): JSX.Element => {
         </nav>
       </div>
       <div className="content">
-          <Products />
+
       </div>
     </div>
   );

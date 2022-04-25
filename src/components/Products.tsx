@@ -1,7 +1,8 @@
+import { RouteComponentProps } from "@reach/router";
 import React, { useEffect, useState } from "react";
 import '../styles/products.scss';
 
-const Products = (): JSX.Element => {
+export const Products:React.FunctionComponent<RouteComponentProps> = (props) => {
     const[dataProd,setDataProd] = useState<any[]>([]);
 
     useEffect(() => {

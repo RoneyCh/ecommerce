@@ -3,9 +3,13 @@
     background-color: rgb(228, 97, 97);
     margin-bottom: 1rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     font-size: 1.5rem; 
+    input {
+        width: 30%;
+        margin-left: 30%;
+    }
     a {
         font-family:Verdana, Geneva, Tahoma, sans-serif;
         margin-right: 20px;
