@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 import '../styles/products.scss';
 import { ProductsPage } from "../pages/productsPage";
 
-export const Products:React.FunctionComponent<RouteComponentProps> = (props) => {
-    const[dataProd,setDataProd] = useState<any[]>([]);
+export const Products:React.FunctionComponent<any> = ({dataProd, setDataProd}) => {
+    
 
     useEffect(() => {
         const getProd = async () => {

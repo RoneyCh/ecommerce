@@ -11,7 +11,7 @@ export const CategoriesPage: React.FunctionComponent<any> = ({dataCat}) => {
           <ul className="menu-container">
             {dataCat.map((cat: {id:number; nome:string}) => (
               <li className="categories" key={cat.id}>
-                <Link to={"/categorias"}>{cat.nome}</Link>
+                <Link to={`/categorias/${cat.id}`}>{cat.nome}</Link>
                 </li>
             ))}
           </ul>

@@ -4,8 +4,8 @@ import { RouteComponentProps, useNavigate } from "@reach/router";
 import { Link } from "react-router-dom";
 import { CategoriesPage } from "../pages/categoriesPage";
 
-const Home:React.FunctionComponent<RouteComponentProps> = (props) => {
-  const [dataCat, setDataCat] = useState<any[]>([]);
+const Home:React.FunctionComponent<any> = ({dataCat, setDataCat}) => {
+  
 
   useEffect(() => {
     const url = "https://mercadosocial.socialtec.net.br/api/categorias/";

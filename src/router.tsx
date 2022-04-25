@@ -3,15 +3,19 @@ import { RouteComponentProps } from '@reach/router';
 import Categories from './components/Categories';
 import Products from './components/Products'; 
 import { Nav } from './components/Nav';
+import { ProductList } from './components/ProductList';
 
 
-export const Router:React.FunctionComponent<RouteComponentProps> = (props) => {
+export const Router:React.FunctionComponent<any> = ({dataCat, setDataCat, dataProd, setDataProd}) => {
     return (
         <BrowserRouter>
             <Nav />
             <Routes>          
-                <Route path='categorias' element={<Categories />}/>
-                <Route path='produtos' element={<Products />}/>
+                <Route path='categorias'>
+                    <Route index element={<Categories dataCat={dataCat} setDataCat={setDataCat}/>} />
+                    <Route path={dataProd.categorias} element={<ProductList dataCat={dataCat} dataProd={dataProd}/>} />
+                </Route>
+                <Route path='produtos' element={<Products dataProd={dataProd} setDataProd={setDataProd}/>}/>
             </Routes>
         </BrowserRouter>
     )

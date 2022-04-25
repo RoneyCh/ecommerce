@@ -1,12 +1,13 @@
-import React from 'react';
-import Home from './components/Categories';
+import React, { useState } from 'react';
 import './styles/app.scss'
 import { Router } from './router';
 
 const App = () => {
+  const [dataCat, setDataCat] = useState<any[]>([]);
+  const[dataProd,setDataProd] = useState<any[]>([]);
   return (
     <div className="App">
-      <Router />
+      <Router dataCat={dataCat} setDataCat={setDataCat} dataProd={dataProd} setDataProd={setDataProd}/>
     </div> 
   );
 }
