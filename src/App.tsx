@@ -5,6 +5,7 @@ import { Router } from './router';
 const App = () => {
   const [dataCat, setDataCat] = useState<any[]>([]);
   const[dataProd,setDataProd] = useState<any[]>([]);
+  
   return (
     <div className="App">
       <Router dataCat={dataCat} setDataCat={setDataCat} dataProd={dataProd} setDataProd={setDataProd}/>

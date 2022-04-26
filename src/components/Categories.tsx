@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { CategoriesPage } from "../pages/categoriesPage";
 
 const Home:React.FunctionComponent<any> = ({dataCat, setDataCat}) => {
-  
 
   useEffect(() => {
     const url = "https://mercadosocial.socialtec.net.br/api/categorias/";

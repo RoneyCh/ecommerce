@@ -11,7 +11,6 @@ export const Products:React.FunctionComponent<any> = ({dataProd, setDataProd}) =
             const response = await fetch('https://mercadosocial.socialtec.net.br/api/produtos/');
             const data = await response.json();
             setDataProd(data);
-            console.log(data);
         }
         getProd();
     },[])

@@ -1,7 +1,7 @@
-import { RouteComponentProps } from "@reach/router";
 import React from "react";
 
 export const ProductsPage: React.FunctionComponent<any> = ({ dataProd }) => {
+  console.log(dataProd)
   return (
     <div className="prod">
       {dataProd.map((prod: { id: number; nome: string; preco: string }) => (
