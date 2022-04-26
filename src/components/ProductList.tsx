@@ -12,11 +12,13 @@ export const ProductList: React.FunctionComponent<any> =(props) => {
         
   },[])
 
-  const product = props.dataProd.filter((prod: { categorias: Array<any> }) => prod.categorias.toString() === id.id)
+  const product = props.dataProd.filter((prod: { categorias: Array<any> }) => prod.categorias.find(x => x.toString() === id.id))
   console.log(product)
   return (
     <div>{product.map((prod: any) => (
+      <div key={prod.id}>
       <div>{prod.nome}</div>
+      </div>
     ))}</div>
   )
 }

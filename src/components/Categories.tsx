@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import '../styles/home.scss'
 import { RouteComponentProps, useNavigate } from "@reach/router";
 import { Link } from "react-router-dom";
 import { CategoriesPage } from "../pages/categoriesPage";
