@@ -3,7 +3,12 @@ import { RouteComponentProps, useNavigate } from "@reach/router";
 import { Link } from "react-router-dom";
 import { CategoriesPage } from "../pages/categoriesPage";
 
-const Home:React.FunctionComponent<any> = ({dataCat, setDataCat}) => {
+interface CategoriesProps {
+  dataCat: Array<any>;
+  setDataCat: any
+}
+
+export const Categories:React.FunctionComponent<CategoriesProps> = ({dataCat, setDataCat}) => {
 
   useEffect(() => {
     const url = "https://mercadosocial.socialtec.net.br/api/categorias/";
@@ -17,5 +22,3 @@ const Home:React.FunctionComponent<any> = ({dataCat, setDataCat}) => {
     <CategoriesPage dataCat={dataCat}/>
   );
 };
-
-export default Home;

@@ -1,24 +1,24 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router'
+import React, { useEffect } from 'react'
+import {ProductListPage} from '../pages/productListPage'
 
-export const ProductList: React.FunctionComponent<any> =(props) => {
-  const id = useParams<any>()
+interface ProductListProps{
+  dataProd: Array<any>;
+  setDataProd: any;
+}
+
+export const ProductList: React.FunctionComponent<ProductListProps> =({dataProd, setDataProd}) => {
+  
+
     useEffect(() => {
       const url = 'https://mercadosocial.socialtec.net.br/api/produtos/';
       fetch(url, {method: 'GET'})
         .then(response => response.json())
-        .then(data => props.setDataProd(data))
+        .then(data => setDataProd(data))
         .catch(()=> alert('erro'))
         
   },[])
 
-  const product = props.dataProd.filter((prod: { categorias: Array<any> }) => prod.categorias.find(x => x.toString() === id.id))
-  console.log(product)
   return (
-    <div>{product.map((prod: any) => (
-      <div key={prod.id}>
-      <div>{prod.nome}</div>
-      </div>
-    ))}</div>
+    <ProductListPage dataProd={dataProd}/>
   )
 }

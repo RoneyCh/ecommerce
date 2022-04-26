@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { ProductsPage } from "../pages/productsPage";
 
 interface ProdProps {
-    dataProd: any,
+    dataProd: Array<any>;
     setDataProd: any
 }
 

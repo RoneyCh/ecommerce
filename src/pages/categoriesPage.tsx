@@ -2,7 +2,16 @@ import { RouteComponentProps } from "@reach/router";
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const CategoriesPage: React.FunctionComponent<any> = ({dataCat}) => {
+interface CategoriesPageProps {
+  nome: string;
+  id: number
+}
+
+interface DataCatProps {
+  dataCat: Array<CategoriesPageProps>
+}
+
+export const CategoriesPage: React.FunctionComponent<DataCatProps> = ({dataCat}) => {
   return (
     <div className="container">
       <div >

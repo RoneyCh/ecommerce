@@ -11,6 +11,28 @@ export const GlobalStyle = createGlobalStyle `
         background-color: rgb(205, 213, 219);
     }
 
+    //Home
+    .homeH1 {
+        font-size: 3rem;
+        margin: 3rem;
+        text-shadow: 1px 1px black;
+        
+    }
+    span {
+        font-size: 4rem;
+        color: #E46161;
+        display: inline; 
+        &:hover {
+            transition: all 1s ease;
+            color: red;
+        }
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr
+
+    }
+
     //Categories
     .container {
         display: flex;
@@ -52,7 +74,7 @@ export const GlobalStyle = createGlobalStyle `
     
     //nav
     .heading {
-        padding: 2rem;
+        padding: 1.5rem;
         background-color: rgb(228, 97, 97);
         margin-bottom: 1rem;
         display: flex;
