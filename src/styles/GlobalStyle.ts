@@ -24,7 +24,7 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 4rem;
         margin-top: 6rem;
         margin-left: 3rem;
-        text-shadow: 1px 1px white;
+        text-shadow: 1px 1px black;
         color: white;
         
     }
@@ -88,21 +88,30 @@ export const GlobalStyle = createGlobalStyle`
     
     //nav
     .heading {
-        padding: 1rem;
-        background: linear-gradient(to bottom, red, #E46161);
+        padding: 0.6rem;
+        color: white;
+        background: linear-gradient(to bottom, #B22222, #A52A2A);
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-size: 1.5rem; 
+        font-size: 1.2rem; 
         z-index: 999;
         top: 0;
         width: 100vw;
         img {
             width: 50px;
         }
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h3 {
+                margin-left: 1rem;
+            }
+        }
         input {
-            width: 30%;
-            margin-left: 30%;
+            width: 40%;
+            height: 4vh;
         }
         a {
             font-family:Verdana, Geneva, Tahoma, sans-serif;
