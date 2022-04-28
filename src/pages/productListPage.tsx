@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 
 interface ProductListPageProps {
@@ -22,10 +22,10 @@ const product = dataProd.filter(prod => prod.categorias.find(x => x.toString() =
     <>
       <h1 style={{padding: '1rem'}}>Produtos</h1>
       <div className='prodlist-content'>{product.map((prod: {id: number; nome: string}) => (
-          <div className='prodlist' key={prod.id}>
+          <Link className='prodlist' key={prod.id} to={`/categorias/${id.id}/${prod.id}`}>
             <div className='prod-img'></div>
             <div>{prod.nome}</div>
-          </div>
+          </Link>
         ))}</div>
       </>
   )
