@@ -49,23 +49,37 @@ export const GlobalStyle = createGlobalStyle`
 
     //Categories
     .container {
-        display: flex;
-        flex-direction: row;
-        align-items: top;
-        
+       display: flex;
+       justify-content: center;
+       padding: 1rem;
     }
     .menu-container {
-        width: 20vw;
-        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         list-style: none;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        max-width: 70vw;
+        
     }
-    
-    .content {
-        width: 60vw;
-    }
-    
     .categories {
-        padding: 0.5rem;
+        padding: 5rem;
+        cursor: pointer;
+        a {
+            text-decoration: none;
+            color: black;
+            div {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 1.1rem;
+                padding: 1rem;
+            }
+        }
+        img {
+            width: 5rem;
+            display: flex;
+            margin: 0 auto;
+            }
     }
 
     //products
