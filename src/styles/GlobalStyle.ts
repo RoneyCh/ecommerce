@@ -142,4 +142,29 @@ export const GlobalStyle = createGlobalStyle`
             }
         }
     }
+    // productList
+    .prodlist-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 40%;
+        margin: 0 auto;
+    } 
+    .prod-img {
+        background-color: red;
+        padding: 3rem;
+    }
+    .prodlist {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        div {
+            margin: 0.1rem;
+        }
+    }
+
+
+
 `;
