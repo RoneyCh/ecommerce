@@ -3,7 +3,10 @@ import React, { useEffect, useState } from "react";
 import { ProductsPage } from "../pages/productsPage";
 
 interface ProdProps {
-    dataProd: Array<any>;
+    dataProd: Array<{
+        nome: string;
+        preco: string;
+        id: number}>;
     setDataProd: any
 }
 

@@ -24,7 +24,7 @@ export const Router:React.FunctionComponent<RouterProps> = ({dataCat, setDataCat
                 <Route path='/' element={<HomePage />}/>       
                 <Route path='categorias'>
                     <Route index element={<Categories dataCat={dataCat} setDataCat={setDataCat}/>} />
-                    <Route path=':id' element={<ProductList dataProd={dataProd} setDataProd={setDataProd}/>} />
+                    <Route path=':id' element={<ProductList dataProd={dataProd} setDataProd={setDataProd} dataCat={dataCat}/>} />
                     <Route path=':id/:id' element={<ProductDetail dataProd={dataProd}/>} />
                 </Route>
                 <Route path='produtos' element={<Products dataProd={dataProd} setDataProd={setDataProd}/>}/>

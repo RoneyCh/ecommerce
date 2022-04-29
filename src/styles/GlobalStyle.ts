@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     
     body {
         background: linear-gradient(to right, #FFF0F5, #FFE4E1);
+        overflow: hidden;
     }
 
     //Home

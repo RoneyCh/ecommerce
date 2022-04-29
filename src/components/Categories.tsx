@@ -4,7 +4,11 @@ import { Link } from "react-router-dom";
 import { CategoriesPage } from "../pages/categoriesPage";
 
 interface CategoriesProps {
-  dataCat: Array<any>;
+  dataCat: Array<{
+    nome: string;
+    id: number
+    imagem: string
+  }>;
   setDataCat: any
 }
 

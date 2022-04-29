@@ -2,11 +2,20 @@ import React, { useEffect } from 'react'
 import {ProductListPage} from '../pages/productListPage'
 
 interface ProductListProps{
-  dataProd: Array<any>;
+  dataProd: Array<{
+    nome: string
+    preco: string
+    id: number
+    categorias: Array<number>
+  }>;
   setDataProd: any;
+  dataCat: Array<{
+    nome: string;
+    id: number;
+  }>
 }
 
-export const ProductList: React.FunctionComponent<ProductListProps> =({dataProd, setDataProd}) => {
+export const ProductList: React.FunctionComponent<ProductListProps> =({dataProd, setDataProd, dataCat}) => {
   
 
     useEffect(() => {
@@ -19,6 +28,6 @@ export const ProductList: React.FunctionComponent<ProductListProps> =({dataProd,
   },[])
 
   return (
-    <ProductListPage dataProd={dataProd}/>
+    <ProductListPage dataProd={dataProd} dataCat={dataCat}/>
   )
 }
