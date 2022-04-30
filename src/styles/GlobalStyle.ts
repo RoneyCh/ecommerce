@@ -65,7 +65,7 @@ export const GlobalStyle = createGlobalStyle`
         
     }
     .categories {
-        padding: 5rem;
+        padding: 4rem 4rem 1rem;
         cursor: pointer;
         a {
             text-decoration: none;
@@ -73,11 +73,10 @@ export const GlobalStyle = createGlobalStyle`
             div {
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
                 font-size: 1.1rem;
-                padding: 1rem;
             }
         }
         img {
-            width: 5rem;
+            width: 10rem;
             display: flex;
             margin: 0 auto;
             }
@@ -153,8 +152,7 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0 auto;
     } 
     .prod-img {
-        background-color: red;
-        padding: 3rem;
+        width: 7rem;
     }
     .prodlist {
         padding: 2rem;
@@ -166,6 +164,40 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
 
+    //productDetail
+
+    .product-detail {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+    }
+
+    .prod-detail-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        img {
+            width: 26rem;
+            margin: 1rem 0rem;
+        }
+    }
+
+    .description {
+        margin-top: 1rem;
+        h2 {
+            margin-top: 1rem;
+        }
+    }
+    .cart {
+        display: flex;
+        margin-top: 3rem;
+        h3 {
+            margin: 1rem;
+        }
+        button {
+            padding: 1rem;
+        }
+    }
 
 
 `;

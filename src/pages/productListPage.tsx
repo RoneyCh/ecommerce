@@ -29,7 +29,7 @@ const nomeCat = dataCat.filter(cat => cat.id.toString() === id.id)
       <h1 style={{padding: '1rem'}}>{nomeCat.map(nome => nome.nome)}</h1>
       <div className='prodlist-content'>{product.map((prod: {id: number; nome: string}) => (
           <Link className='prodlist' key={prod.id} to={`/categorias/${id.id}/${prod.id}`}>
-            <div className='prod-img'></div>
+            <img className='prod-img' src="https://images.pexels.com/photos/6098361/pexels-photo-6098361.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
             <div>{prod.nome}</div>
           </Link>
         ))}</div>

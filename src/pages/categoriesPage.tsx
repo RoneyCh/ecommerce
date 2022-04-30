@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 interface CategoriesPageProps {
   nome: string;
   id: number
-  imagem: string
+  imagem?: string
 }
 
 interface DataCatProps {
@@ -18,10 +18,10 @@ export const CategoriesPage: React.FunctionComponent<DataCatProps> = ({dataCat})
         <nav className="container">
           <h1>Categorias</h1>
           <ul className="menu-container">
-            {dataCat.map((cat: {id:number; nome:string; imagem: string}) => (
+            {dataCat.map((cat: {id:number; nome:string;}) => (
               <li className="categories" key={cat.id}>
                 <Link to={`/categorias/${cat.id}`}>
-                  <img src={cat.imagem} />
+                  <img src='https://super.abril.com.br/wp-content/uploads/2019/03/site_feira.png' />
                   <div>{cat.nome}</div>
                 </Link>
                 </li>
