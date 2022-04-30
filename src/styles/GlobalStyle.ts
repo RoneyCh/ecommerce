@@ -169,6 +169,14 @@ export const GlobalStyle = createGlobalStyle`
     .product-detail {
         display: grid;
         grid-template-columns: 1.5fr 1fr;
+        button {
+            border-radius: 0.3rem;
+            padding: 0.5rem;
+            cursor: pointer;
+            &:hover{
+                background-color: #FFE4E1;
+            }
+        }
     }
 
     .prod-detail-content {
