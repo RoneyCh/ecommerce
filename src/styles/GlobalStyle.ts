@@ -9,7 +9,8 @@ export const GlobalStyle = createGlobalStyle`
     
     body {
         background: linear-gradient(to right, #FFF0F5, #FFE4E1);
-        overflow: hidden;
+        overflow-x: hidden;
+        font-size: 1.5rem;
     }
 
     //Home
@@ -145,23 +146,35 @@ export const GlobalStyle = createGlobalStyle`
     // productList
     .prodlist-content {
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         flex-wrap: wrap;
-        width: 40%;
-        margin: 0 auto;
+        
+        
     } 
     .prod-img {
         width: 7rem;
+        margin-right: 1rem;
     }
     .prodlist {
         padding: 2rem;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        width: 100%;
+        align-items: flex-start;
+        border-bottom: solid 1px;
+        text-decoration: none;
+        color: black;
+        justify-content: space-between;
         div {
-            margin: 0.1rem;
+            display: flex;
+            div {
+                display: flex;
+                flex-direction: column;
+            }
+
         }
+        
     }
 
     //productDetail
