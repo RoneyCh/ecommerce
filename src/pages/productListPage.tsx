@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom';
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 interface ProductListPageProps {
     nome: string;
@@ -36,7 +37,10 @@ const nomeCat = dataCat.filter(cat => cat.id.toString() === id.id)
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
               </div>
             </div>
-            <div className='preco'>R$ {prod.preco}</div>
+            <div className='preco'>
+              <h2>R$ {prod.preco}</h2>
+              <FontAwesomeIcon icon={faShoppingCart}/>
+              </div>
           </Link>
         ))}</div>
       </>

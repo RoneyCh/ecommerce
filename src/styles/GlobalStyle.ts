@@ -174,7 +174,18 @@ export const GlobalStyle = createGlobalStyle`
             }
 
         }
-        
+        &:hover {
+            background-color: lightpink;
+        }
+    }
+
+    .preco {
+        display: flex;
+        flex-direction: column;
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
     }
 
     //productDetail
