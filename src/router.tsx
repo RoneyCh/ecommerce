@@ -6,6 +6,7 @@ import { Nav } from './components/Nav';
 import { ProductList } from './components/ProductList';
 import { HomePage } from './pages/homePage';
 import { ProductDetail } from './components/ProductDetail';
+import { ShoppingCart } from './components/shoppingCart';
 
 interface RouterProps {
     dataCat: Array<any>;
@@ -28,6 +29,7 @@ export const Router:React.FunctionComponent<RouterProps> = ({dataCat, setDataCat
                     <Route path=':id/:id' element={<ProductDetail dataProd={dataProd}/>} />
                 </Route>
                 <Route path='produtos' element={<Products dataProd={dataProd} setDataProd={setDataProd}/>}/>
+                <Route path='carrinho' element={<ShoppingCart />}/>
             </Routes>
         </BrowserRouter>
     )

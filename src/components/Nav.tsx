@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons';
 
 export const Nav:React.FC = () =>{
 
@@ -14,8 +16,8 @@ export const Nav:React.FC = () =>{
             <div>
                 <Link to={'/'}>Home</Link>
                 <Link to={'/categorias'}>Categorias</Link>
-                <Link to={'/produtos'}>Sobre</Link>
-                <Link to={'/'}>Login</Link>
+                <Link to={'/produtos'}><FontAwesomeIcon icon={faUser}/></Link>
+                <Link to={'/carrinho'}><FontAwesomeIcon icon={faShoppingCart}/></Link>
             </div>
         </header>
     </div>
