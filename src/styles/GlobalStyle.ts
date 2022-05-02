@@ -163,9 +163,11 @@ export const GlobalStyle = createGlobalStyle`
         width: 100%;
         align-items: flex-start;
         border-bottom: solid 1px;
-        text-decoration: none;
-        color: black;
         justify-content: space-between;
+        a {
+            text-decoration: none;
+            color: black;
+        }
         div {
             display: flex;
             div {
