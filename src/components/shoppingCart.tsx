@@ -1,11 +1,19 @@
-import React, { useContext } from 'react'
-import { CartContext } from '../contexts/CartContext'
+import React, { useContext } from "react";
+import { CartContext } from "../contexts/CartContext";
 
-export const ShoppingCart:React.FC = () => {
-
+export const ShoppingCart: React.FC = () => {
   const { cart } = useContext(CartContext);
-  console.log(cart)
+  console.log(cart);
   return (
-    <div>{cart.map(item => item.nome)}</div>
-  )
-}
+      <div>
+        {cart.map((item) => (
+          <div className="cart-columns">
+          <div className="items-cart">
+            <div>{item.nome}</div>
+            <div>{item.preco}</div>
+          </div>
+          </div>
+        ))}
+      </div>
+  );
+};

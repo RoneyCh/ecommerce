@@ -143,6 +143,24 @@ export const GlobalStyle = createGlobalStyle`
             }
         }
     }
+
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .cart-link {
+            div {
+                position: relative;
+            }
+            p {
+                position: absolute;
+                top: 6.5%
+            }
+        }
+    }
+
+
     // productList
     .prodlist-content {
         display: flex;
@@ -232,6 +250,22 @@ export const GlobalStyle = createGlobalStyle`
             padding: 1rem;
         }
     }
+    //shopping cart
+    .items-cart {
+        background-color: #FFE4E1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0.5rem;
+        &:hover {
+            background-color: #E46161;
+        }
+    }
+    .cart-columns {
+        margin-bottom: 2rem;
+        border-bottom: solid 1px;
 
+    }
 
 `;

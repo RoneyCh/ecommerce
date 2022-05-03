@@ -17,13 +17,13 @@ export const Nav:React.FC = () =>{
             <h3>Feira CFH</h3>
           </div>
             <input placeholder='O que está procurando?' type="text" />
-            <div>
+            <div className='nav-links'>
                 <Link to={'/'}>Home</Link>
                 <Link to={'/categorias'}>Categorias</Link>
                 <Link to={'/produtos'}><FontAwesomeIcon icon={faUser}/></Link>
-                <div>
+                <div className='cart-link'>
                   <Link to={'/carrinho'}><FontAwesomeIcon icon={faShoppingCart}/></Link>
-                <p>{cart.length - 1}</p>
+                  <p>{cart.length - 1}</p>
                 </div>
             </div>
         </header>
