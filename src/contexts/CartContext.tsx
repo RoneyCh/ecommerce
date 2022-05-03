@@ -11,9 +11,8 @@ type childrenP = {
 
 const CartContextProps = {
     cartHandler: (nome:string, preco:string, id: number) => {},
-    cart: [{}]
+    cart: [{nome: '', preco: '', id: 1111}]
 }
-
 
 
 export const CartContext = createContext(CartContextProps);
@@ -21,7 +20,7 @@ export const CartContext = createContext(CartContextProps);
 
 export default function CartProvider({ children }:childrenP){ 
 
-    const [cart, setCart] = useState<cartProps[]>([])
+    const [cart, setCart] = useState(CartContextProps.cart)
 
     const cartHandler = (nome: string, preco: string, id: number) => {
         const item = {nome, preco, id}

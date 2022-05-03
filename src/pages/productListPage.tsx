@@ -28,6 +28,7 @@ export const ProductListPage: React.FC<DataProdProps> = ({
     prod.categorias.find((x) => x.toString() === id.id)
   );
   const nomeCat = dataCat.filter((cat) => cat.id.toString() === id.id);
+  //context
   const { cartHandler } = useContext(CartContext);
 
   return (

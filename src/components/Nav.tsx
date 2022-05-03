@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons';
+import { CartContext } from '../contexts/CartContext';
+
 
 export const Nav:React.FC = () =>{
+
+  const { cart } = useContext(CartContext);
 
   return (
     <div>
@@ -17,7 +21,10 @@ export const Nav:React.FC = () =>{
                 <Link to={'/'}>Home</Link>
                 <Link to={'/categorias'}>Categorias</Link>
                 <Link to={'/produtos'}><FontAwesomeIcon icon={faUser}/></Link>
-                <Link to={'/carrinho'}><FontAwesomeIcon icon={faShoppingCart}/></Link>
+                <div>
+                  <Link to={'/carrinho'}><FontAwesomeIcon icon={faShoppingCart}/></Link>
+                <p>{cart.length - 1}</p>
+                </div>
             </div>
         </header>
     </div>
