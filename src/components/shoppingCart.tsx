@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
 
 export const ShoppingCart: React.FC = () => {
-  const { cart } = useContext(CartContext);
+  const { cart, removeItem } = useContext(CartContext);
   console.log(cart);
   return (
     <div>
@@ -10,9 +10,10 @@ export const ShoppingCart: React.FC = () => {
         <div>
           {item.id !== 5000 ? (
             <div className="cart-columns">
-              <div className="items-cart">
+              <div onClick={() => removeItem(item.id)} className="items-cart">
+                <img src="https://images.pexels.com/photos/6098361/pexels-photo-6098361.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
                 <div>{item.nome}</div>
-                <div>{item.preco}</div>
+                <div>R$ {item.preco}</div>
               </div>
             </div>
           ) : (

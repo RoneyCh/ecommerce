@@ -258,12 +258,15 @@ export const GlobalStyle = createGlobalStyle`
         align-items: center;
         width: 100%;
         padding: 0.5rem;
+        img {
+            width: 5rem;
+        }
         &:hover {
             background-color: #E46161;
         }
     }
     .cart-columns {
-        margin-bottom: 2rem;
+        margin-bottom: 0.5rem;
         border-bottom: solid 1px;
 
     }
