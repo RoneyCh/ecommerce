@@ -11,7 +11,7 @@ type childrenP = {
 
 const CartContextProps = {
     cartHandler: (nome:string, preco:string, id: number) => {},
-    cart: [{nome: '', preco: '', id: 1111}]
+    cart: [{nome: '', preco: '', id: 5000}]
 }
 
 
