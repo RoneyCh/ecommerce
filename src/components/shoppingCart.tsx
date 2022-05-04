@@ -21,7 +21,7 @@ export const ShoppingCart: React.FC = () => {
           )}
         </div>
       ))}
-      <div>{cart.length > 1 ? (<button onClick={() => clearCart()}>limpa</button>): 'O carrinho está vazio'}</div>
+      <div className="clear">{cart.length > 1 ? (<button  onClick={() => clearCart()}>Limpar carrinho</button>): 'O carrinho está vazio'}</div>
     </div>
   );
 };

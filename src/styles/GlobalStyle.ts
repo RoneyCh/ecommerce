@@ -270,5 +270,21 @@ export const GlobalStyle = createGlobalStyle`
         border-bottom: solid 1px;
 
     }
+    .clear {
+        margin-top: 2rem;
+        
+        button {
+        font-weight: bold;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        color: red;
+        display: flex;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #FFE4E1;
+        
+        }
+
+    }
 
 `;
