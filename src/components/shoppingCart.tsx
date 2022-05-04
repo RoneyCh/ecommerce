@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
 
 export const ShoppingCart: React.FC = () => {
-  const { cart, removeItem } = useContext(CartContext);
+  const { cart, removeItem, clearCart } = useContext(CartContext);
   console.log(cart);
   return (
     <div>
@@ -21,6 +21,7 @@ export const ShoppingCart: React.FC = () => {
           )}
         </div>
       ))}
+      <div>{cart.length > 1 ? (<button onClick={() => clearCart()}>limpa</button>): 'O carrinho está vazio'}</div>
     </div>
   );
 };

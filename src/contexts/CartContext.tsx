@@ -12,7 +12,8 @@ type childrenP = {
 const CartContextProps = {
     cartHandler: (nome:string, preco:string, id: number) => {},
     removeItem:(clickedItemIndex: number) => {},
-    cart: [{nome: '', preco: '', id: 5000}]
+    cart: [{nome: '', preco: '', id: 5000}],
+    clearCart: () => {} 
 }
 
 
@@ -33,9 +34,13 @@ export default function CartProvider({ children }:childrenP){
         const filterCart = cart.filter(prod => prod.id !== clickedItemIndex);
         setCart(filterCart);
     }
+
+    const clearCart = () => {
+        setCart(CartContextProps.cart);
+    }
       
     return (
-        <CartContext.Provider value={{cart, cartHandler,removeItem}}>{children}</CartContext.Provider>
+        <CartContext.Provider value={{cart, cartHandler,removeItem, clearCart}}>{children}</CartContext.Provider>
     )
 
 };
