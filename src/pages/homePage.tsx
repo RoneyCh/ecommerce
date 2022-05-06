@@ -9,7 +9,7 @@ export const HomePage = () =>{
         <h1 className='homeH1'>Bem vindo a feira do<br/><span>Centro Frei Humberto</span></h1>
       </div>
       <div>
-        <h1>OIII</h1>
+        <h1></h1>
       </div>
       </div>
     </div>
