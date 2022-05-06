@@ -6,7 +6,13 @@ export const GlobalStyle = createGlobalStyle`
         padding:0;
         box-sizing: border-box;
     }
-    
+
+    html {
+        @media screen and (max-width: 768px){
+            font-size: 70%;
+        }
+    }
+
     body {
         background: linear-gradient(to right, #FFF0F5, #FFE4E1);
         overflow-x: hidden;
@@ -125,7 +131,7 @@ export const GlobalStyle = createGlobalStyle`
     
     //nav
     .heading {
-        padding: 0.6rem;
+        padding: 0.5rem ;
         color: white;
         background: linear-gradient(to bottom, #B22222, #A52A2A);
         display: flex;
@@ -170,14 +176,46 @@ export const GlobalStyle = createGlobalStyle`
         display: flex;
         justify-content: center;
         align-items: center;
-
+        transition: all 0.5s ease;
         .cart-link {
             div {
                 position: relative;
             }
             p {
                 position: absolute;
-                top: 6.5%
+                
+            }
+        }
+        
+    }
+    #hidden {
+        display: flex;
+    }
+    .toggle-btn {
+            display: none;
+        }
+    @media screen and (max-width: 768px){
+        .nav-links {
+            display: none;
+        }
+        .toggle-btn {
+            display: flex;
+            margin-right: 2rem;
+        }
+        #hidden {
+            position: absolute;
+            right: 0;
+            top: 5.3rem;
+            height: 9rem;
+            background: linear-gradient(to bottom, #B22222, #A52A2A);
+            flex-direction: column;
+            justify-content: start;
+            transition: all 0.5s ease;
+            a{
+                margin: 0.5rem;
+            }
+            .cart-link {
+                margin-top: 0.5rem;
             }
         }
     }
