@@ -1,10 +1,5 @@
 import React, {createContext, ReactNode, useContext, useEffect, useState} from 'react';
 
-interface cartProps{
-    nome: string
-    preco: string
-    id: number
-}
 type childrenP = {
     children: ReactNode
 }
@@ -43,4 +38,4 @@ export default function CartProvider({ children }:childrenP){
         <CartContext.Provider value={{cart, cartHandler,removeItem, clearCart}}>{children}</CartContext.Provider>
     )
 
-};
+};  

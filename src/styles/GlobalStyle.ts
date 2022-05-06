@@ -57,8 +57,6 @@ export const GlobalStyle = createGlobalStyle`
     }
     .menu-container {
         display: flex;
-        align-items: center;
-        justify-content: center;
         list-style: none;
         flex-wrap: wrap;
         margin: 0 auto;
@@ -81,6 +79,30 @@ export const GlobalStyle = createGlobalStyle`
             display: flex;
             margin: 0 auto;
             }
+    }
+
+    @media screen  and (max-width: 768px){
+ 
+        .container {
+            flex-direction: column;
+            
+        }
+        .menu-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            flex-wrap: wrap;
+            flex: 1;   
+    }
+        .categories {
+            padding: 1rem;
+            
+            img {
+                width: 9rem;
+            }
+        }
+        
     }
 
     //products
@@ -272,19 +294,29 @@ export const GlobalStyle = createGlobalStyle`
     }
     .clear {
         margin-top: 2rem;
-        
-        button {
-        font-weight: bold;
-        border-radius: 0.5rem;
-        cursor: pointer;
-        color: red;
         display: flex;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #FFE4E1;
+        justify-content: center;
+        align-items: center;
+        button {
+            font-weight: bold;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            color: red;
+            display: flex;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FFE4E1;
+            transition: filter 0.2s;
+            &:hover {
+                filter: brightness(0.9);
+            }
         
         }
 
+    }
+
+    [disabled] {
+        opacity: 0.6;
     }
 
 `;
