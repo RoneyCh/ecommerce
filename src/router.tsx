@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { RouteComponentProps } from '@reach/router';
 import { Categories } from './components/Categories';
-import Products from './components/Products'; 
 import { Nav } from './components/Nav';
 import { ProductList } from './components/ProductList';
 import { HomePage } from './pages/homePage';
@@ -28,7 +27,6 @@ export const Router:React.FunctionComponent<RouterProps> = ({dataCat, setDataCat
                     <Route path=':id' element={<ProductList dataProd={dataProd} setDataProd={setDataProd} dataCat={dataCat}/>} />
                     <Route path=':id/:id' element={<ProductDetail dataProd={dataProd}/>} />
                 </Route>
-                <Route path='produtos' element={<Products dataProd={dataProd} setDataProd={setDataProd}/>}/>
                 <Route path='carrinho' element={<ShoppingCart />}/>
             </Routes>
         </BrowserRouter>

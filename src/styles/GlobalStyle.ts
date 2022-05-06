@@ -86,25 +86,6 @@ export const GlobalStyle = createGlobalStyle`
             margin: 0 auto;
             }
     }
-
-
-    //products
-    .prod {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-wrap: wrap;    
-    }
-    
-    .prod-content {
-        padding:3rem;
-        
-    }
-    
-    .image {
-        background-color: aqua;
-        padding: 50px;
-    }
     
     //nav
     .heading {
@@ -272,34 +253,38 @@ export const GlobalStyle = createGlobalStyle`
         img {
             width: 5rem;
         }
-        &:hover {
-            background-color: #E46161;
-        }
+    }
+    .remove-item {
+        border: none;
+        color: red;
+        cursor: pointer;
+        background-color: transparent;
     }
     .cart-columns {
         margin-bottom: 0.5rem;
         border-bottom: solid 1px;
 
     }
-    .clear {
-        margin-top: 2rem;
+    .btns-cart {
+        margin: 2rem;
         display: flex;
         justify-content: center;
-        align-items: center;
+
         button {
+            margin-left: 2rem;
             font-weight: bold;
             border-radius: 0.5rem;
             cursor: pointer;
-            color: red;
             display: flex;
-            margin: 0 auto;
-            padding: 20px;
+            padding: 15px;
             background-color: #FFE4E1;
             transition: filter 0.2s;
             &:hover {
                 filter: brightness(0.9);
             }
-        
+        }
+        .btn-clear {
+            color: #A52A2A
         }
 
     }
@@ -394,7 +379,7 @@ export const GlobalStyle = createGlobalStyle`
     .items-cart {
         font-size: 2rem;
     }
-    .clear {
+    .btns-cart {
         button {
             font-size: 1.5rem;
            }
