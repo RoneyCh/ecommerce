@@ -60,7 +60,7 @@ export const ProductListPage: React.FC<DataProdProps> = ({
               <h2>R$ {prod.preco}</h2>
               <FontAwesomeIcon
                 icon={faShoppingCart}
-                onClick={() => console.log(cartHandler(prod.nome, prod.preco, prod.id))}
+                onClick={() => cartHandler(prod.nome, prod.preco, prod.id)}
                 cursor="pointer"
               />
             </div>

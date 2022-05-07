@@ -5,9 +5,9 @@ type childrenP = {
 }
 
 const CartContextProps = {
-    cartHandler: (nome:string, preco:string, id: number) => {},
+    cartHandler: (nome:string, preco:string, id: number, qty?:number) => {},
     removeItem:(clickedItemIndex: number) => {},
-    cart: [{nome: '', preco: '', id: 5000}],
+    cart: [{nome: '', preco: '', id: 5000, qty:0}],
     clearCart: () => {} 
 }
 
@@ -19,10 +19,15 @@ export default function CartProvider({ children }:childrenP){
 
     const [cart, setCart] = useState(CartContextProps.cart)
 
-    const cartHandler = (nome: string, preco: string, id: number) => {
+    const cartHandler = (nome: string, preco: string, id: number, qty?:number) => {
         const item = {nome, preco, id}
-        setCart([...cart, item]);
-        console.log(cart);
+        const exist = cart.find(prod => prod.id === item.id) 
+        if(exist) {
+            setCart(cart.map(prod => prod.id ===  item.id ? {...exist, qty: exist.qty + 1}: prod))
+        } else {
+            setCart([...cart, {...item, qty: 1}]);
+        }
+        
       }
 
     const removeItem = (clickedItemIndex:number) => {
