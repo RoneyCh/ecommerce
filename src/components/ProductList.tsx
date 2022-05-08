@@ -25,7 +25,7 @@ export const ProductList: React.FunctionComponent<ProductListProps> =({dataProd,
         .then(data => setDataProd(data))
         .catch(()=> alert('erro'))
         
-  },[setDataProd(dataProd)])
+  },[setDataProd])
 
   return (
     <ProductListPage dataProd={dataProd} dataCat={dataCat}/>

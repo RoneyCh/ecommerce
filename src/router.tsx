@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { RouteComponentProps } from '@reach/router';
 import { Categories } from './components/Categories';
 import { Nav } from './components/Nav';
 import { ProductList } from './components/ProductList';
