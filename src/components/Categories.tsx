@@ -18,7 +18,7 @@ export const Categories:React.FunctionComponent<CategoriesProps> = ({dataCat, se
         .then(response => response.json())
         .then(data => setDataCat(data))
 
-  }, [dataCat]);
+  }, [setDataCat]);
 
   return (
     <CategoriesPage dataCat={dataCat}/>
