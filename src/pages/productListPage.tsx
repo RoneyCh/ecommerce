@@ -1,4 +1,4 @@
-import React, { useState, useContext, ReactNode } from "react";
+import React, { useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";

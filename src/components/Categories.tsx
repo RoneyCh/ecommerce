@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { RouteComponentProps, useNavigate } from "@reach/router";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
 import { CategoriesPage } from "../pages/categoriesPage";
 
 interface CategoriesProps {
@@ -20,7 +18,7 @@ export const Categories:React.FunctionComponent<CategoriesProps> = ({dataCat, se
         .then(response => response.json())
         .then(data => setDataCat(data))
 
-  }, []);
+  }, [dataCat]);
 
   return (
     <CategoriesPage dataCat={dataCat}/>

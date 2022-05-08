@@ -20,7 +20,7 @@ export const CategoriesPage: React.FunctionComponent<DataCatProps> = ({dataCat})
             {dataCat.map((cat: {id:number; nome:string;}) => (
               <li className="categories" key={cat.id}>
                 <Link to={`/categorias/${cat.id}`}>
-                  <img src='https://super.abril.com.br/wp-content/uploads/2019/03/site_feira.png' />
+                  <img alt="" src='https://super.abril.com.br/wp-content/uploads/2019/03/site_feira.png' />
                   <div>{cat.nome}</div>
                 </Link>
                 </li>
