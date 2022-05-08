@@ -1,1 +1,2 @@
-# Ecommerce Feira Centro Frei Humberto
+# Ecommerce
+Simple ecommerce project using react / currently in progress 
