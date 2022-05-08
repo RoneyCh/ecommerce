@@ -37,7 +37,7 @@ export const ShoppingCart: React.FC = () => {
         </div>
       ))} 
       <div>{cart.length > 1 ? (
-        <><div>{totalValue.toFixed(2)}</div><div className="btns-cart">
+        <><div className="total-value">Total: R$ {totalValue.toFixed(2)}</div><div className="btns-cart">
           <button className="btn-clear" onClick={() => clearCart()}>Limpar carrinho</button>
           <button className="btn-buy" onClick={() => buyMessage()}>Comprar</button>
         </div></>

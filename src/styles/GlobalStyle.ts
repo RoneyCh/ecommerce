@@ -287,8 +287,15 @@ export const GlobalStyle = createGlobalStyle`
             color: #A52A2A
         }
 
-    }
+        
 
+    }
+    .total-value {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin: 2rem;
+        }
     [disabled] {
         opacity: 0.6;
     }
@@ -377,7 +384,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     //shopping cart
     .items-cart {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
     .btns-cart {
         button {
