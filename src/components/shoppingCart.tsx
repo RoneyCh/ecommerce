@@ -9,6 +9,12 @@ export const ShoppingCart: React.FC = () => {
     return alert('Comprou')
   }
 
+  const priceToNumber = (value:string) => {
+    const price:number = +value;
+    return price;
+  }
+  const totalValue = cart.reduce((price, item)=> price + item.qty * priceToNumber(item.preco), 0);
+
   return (
     <div>
       {cart.map((item) => (
@@ -20,7 +26,7 @@ export const ShoppingCart: React.FC = () => {
                 <div>{item.nome}</div>
                 <div>Quantidade: {item.qty}</div>
                 <div>  
-                  <div>R$ {(item.qty * parseFloat(item.preco)).toFixed(2)}</div>
+                  <div>R$ {(item.qty * priceToNumber(item.preco)).toFixed(2)}</div>
                   <button onClick={() => removeItem(item.id)} className="remove-item">Remover</button>
                 </div>
               </div>
@@ -29,14 +35,15 @@ export const ShoppingCart: React.FC = () => {
             ""
           )}
         </div>
-      ))}
+      ))} 
       <div>{cart.length > 1 ? (
-        <div className="btns-cart">
+        <><div>{totalValue.toFixed(2)}</div><div className="btns-cart">
           <button className="btn-clear" onClick={() => clearCart()}>Limpar carrinho</button>
           <button className="btn-buy" onClick={() => buyMessage()}>Comprar</button>
-        </div>
+        </div></>
       ): 'O carrinho está vazio'}
       </div>
+      
     </div>
   );
 };
