@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom';
+import { CartContext } from '../contexts/CartContext';
 
 interface ProductDetailProps {
     nome: string;
     preco: string;
     id: number;
     imagem: string;
+    qty:number
 }
   
   interface DataProdProps {
@@ -16,6 +18,7 @@ export const ProductDetail: React.FunctionComponent<DataProdProps> =({dataProd})
   const id = useParams();
   const product:any =  dataProd.find(x => x.id.toString() === id.id);
 
+  const { cart, removeItem, cartHandler } = useContext(CartContext);
 
   return (
     <div className='product-detail'>
@@ -32,9 +35,9 @@ export const ProductDetail: React.FunctionComponent<DataProdProps> =({dataProd})
           sed quasi, rem sapiente, cum, debitis eos cumque quod labore ipsam excepturi vero soluta 
           alias architecto illum dolore quo.</h2> 
         <div className='cart'>
-          <button>+</button>
-          <h3>0</h3>
-          <button>-</button>
+          <button onClick={() => cartHandler(product.nome, product.preco, product.id)}>+</button>
+          <h3>{cart.map(qty => qty.qty)}</h3>
+          <button onClick={() => removeItem(product.id)}>-</button>
         </div>
       </div>
       
