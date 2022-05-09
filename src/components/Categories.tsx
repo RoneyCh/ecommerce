@@ -2,18 +2,14 @@ import React, { useEffect } from "react";
 import { CategoriesPage } from "../pages/categoriesPage";
 
 interface CategoriesProps {
-  dataCat: Array<{
-    nome: string;
-    id: number
-    imagem: string
-  }>;
+  dataCat: Array<string>
   setDataCat: any
 }
 
 export const Categories:React.FunctionComponent<CategoriesProps> = ({dataCat, setDataCat}) => {
 
   useEffect(() => {
-    const url = "https://mercadosocial.socialtec.net.br/api/categorias/";
+    const url = "https://fakestoreapi.com/products/categories";
     fetch(url, {method:'GET'})
         .then(response => response.json())
         .then(data => setDataCat(data))

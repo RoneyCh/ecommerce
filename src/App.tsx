@@ -3,22 +3,18 @@ import { GlobalStyle } from './styles/GlobalStyle';
 import { Router } from './router';
 import CartProvider from './contexts/CartContext';
 
-interface DataCatProps {
-  nome: string;
-  id: number;
-  midia_list?: string;
-}
+
 
 interface DataProdProps {
-  nome: string;
+  title: string;
   id: number;
-  preco: string;
-  categorias:Array<number>;
-  midia_list?: string;
+  price: string;
+  category:string;
+  image: string;
 }
 
 const App = () => {
-  const [dataCat, setDataCat] = useState<DataCatProps[]>([]);
+  const [dataCat, setDataCat] = useState<string[]>([]);
   const[dataProd,setDataProd] = useState<DataProdProps[]>([]);
   
   return (  

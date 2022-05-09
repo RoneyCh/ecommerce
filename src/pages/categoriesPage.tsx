@@ -2,26 +2,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 interface CategoriesPageProps {
-  nome: string;
-  id: number
-  imagem?: string
+  dataCat: Array<string>
 }
 
-interface DataCatProps {
-  dataCat: Array<CategoriesPageProps>
-}
-
-export const CategoriesPage: React.FunctionComponent<DataCatProps> = ({dataCat}) => {
+export const CategoriesPage: React.FunctionComponent<CategoriesPageProps> = ({dataCat}) => {
   return (
     <div>
         <nav className="container">
           <h1>Categorias</h1>
           <ul className="menu-container">
-            {dataCat.map((cat: {id:number; nome:string;}) => (
-              <li className="categories" key={cat.id}>
-                <Link to={`/categorias/${cat.id}`}>
-                  <img alt="" src='https://super.abril.com.br/wp-content/uploads/2019/03/site_feira.png' />
-                  <div>{cat.nome}</div>
+            {dataCat.map((cat: string) => (
+              <li className="categories">
+                <Link to={`/categorias/${cat}`}>
+                  <div>{cat}</div>
                 </Link>
                 </li>
             ))}

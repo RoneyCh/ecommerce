@@ -75,9 +75,10 @@ export const GlobalStyle = createGlobalStyle`
         a {
             text-decoration: none;
             color: black;
-            div {
+            div {    
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
                 font-size: 1.1rem;
+                
             }
         }
         img {
@@ -191,6 +192,13 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
 
+    .prod-title {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 500px;
+    }
+
     .preco {
         display: flex;
         flex-direction: column;
@@ -221,7 +229,8 @@ export const GlobalStyle = createGlobalStyle`
         align-items: center;
         flex-direction: column;
         img {
-            width: 26rem;
+            width: 20rem;
+            height: 20rem;
             margin: 1rem 0rem;
         }
     }
@@ -230,6 +239,8 @@ export const GlobalStyle = createGlobalStyle`
         margin-top: 1rem;
         h2 {
             margin-top: 1rem;
+            font-size: 1.5rem;
+            font-weight: 300;
         }
     }
     .cart {

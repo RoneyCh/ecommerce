@@ -3,11 +3,12 @@ import { useParams } from 'react-router-dom';
 import { CartContext } from '../contexts/CartContext';
 
 interface ProductDetailProps {
-    nome: string;
-    preco: string;
+    title: string;
+    price: string;
     id: number;
-    imagem: string;
+    image: string;
     qty:number
+    description: string
 }
   
   interface DataProdProps {
@@ -23,19 +24,17 @@ export const ProductDetail: React.FunctionComponent<DataProdProps> =({dataProd})
   return (
     <div className='product-detail'>
       <div className='prod-detail-content'>
-        <img alt='' className='prodDetail-img' src='https://images.pexels.com/photos/11590667/pexels-photo-11590667.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'></img>
-        <h2>{product.nome}</h2>
-        <h2>R$ {product.preco}</h2>
+        <img alt='' className='prodDetail-img' src={product.image}></img>
+        <h2>{product.title}</h2>
+        <h2>$ {product.price}</h2>
         <button>Comprar</button>
       </div>
       
       <div className='description'>
         <h1>Descrição</h1>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatem similique 
-          sed quasi, rem sapiente, cum, debitis eos cumque quod labore ipsam excepturi vero soluta 
-          alias architecto illum dolore quo.</h2> 
+        <h2>{product.description}</h2> 
         <div className='cart'>
-          <button onClick={() => cartHandler(product.nome, product.preco, product.id)}>+</button>
+          <button onClick={() => cartHandler(product.title, product.price, product.id)}>+</button>
           <h3>{cart.map(qty => qty.qty)}</h3>
           <button onClick={() => removeItem(product.id)}>-</button>
         </div>

@@ -7,7 +7,7 @@ import { ProductDetail } from './components/ProductDetail';
 import { ShoppingCart } from './components/shoppingCart';
 
 interface RouterProps {
-    dataCat: Array<any>;
+    dataCat: Array<string>;
     setDataCat: any;
     dataProd: Array<any>;
     setDataProd: any;

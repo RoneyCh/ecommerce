@@ -3,23 +3,21 @@ import {ProductListPage} from '../pages/productListPage'
 
 interface ProductListProps{
   dataProd: Array<{
-    nome: string
-    preco: string
+    title: string
+    price: string
     id: number
-    categorias: Array<number>
+    category: string
+    image:string
   }>;
   setDataProd: any;
-  dataCat: Array<{
-    nome: string;
-    id: number;
-  }>
+  dataCat: Array<string>
 }
 
 export const ProductList: React.FunctionComponent<ProductListProps> =({dataProd, setDataProd, dataCat}) => {
   
 
     useEffect(() => {
-      const url = 'https://mercadosocial.socialtec.net.br/api/produtos/';
+      const url = 'https://fakestoreapi.com/products';
       fetch(url, {method: 'GET'})
         .then(response => response.json())
         .then(data => setDataProd(data))
