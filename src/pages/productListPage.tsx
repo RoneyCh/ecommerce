@@ -10,6 +10,7 @@ interface ProductListPageProps {
   id: number;
   category: string;
   image: string;
+  qty?:number
 }
 
 interface DataProdProps {
@@ -58,10 +59,10 @@ export const ProductListPage: React.FC<DataProdProps> = ({
                 </div>
               </Link>
               <div className="preco">
-                <h2>R$ {prod.price}</h2>
+                <h2>$ {prod.price}</h2>
                 <FontAwesomeIcon
                   icon={faShoppingCart}
-                  onClick={() => cartHandler(prod.title, prod.price, prod.id)}
+                  onClick={() => cartHandler(prod.title, prod.price, prod.id, prod.image)}
                   cursor="pointer"
                 />
               </div>

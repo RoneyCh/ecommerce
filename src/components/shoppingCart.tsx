@@ -22,12 +22,16 @@ export const ShoppingCart: React.FC = () => {
           {item.id !== 5000 ? (
             <div className="cart-columns">
               <div className="items-cart">
-                <img src="https://images.pexels.com/photos/6098361/pexels-photo-6098361.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
-                <div>{item.nome}</div>
-                <div>Quantidade: {item.qty}</div>
-                <div>  
-                  <div>R$ {(item.qty * priceToNumber(item.preco)).toFixed(2)}</div>
-                  <button onClick={() => removeItem(item.id)} className="remove-item">Remover</button>
+                <div>
+                  <img src={item.image} alt="" />
+                  <div>{item.nome}</div>
+                </div>
+                <div> 
+                  <div>Quantidade: {item.qty}</div>
+                  <div>  
+                    <div>$ {(item.qty * priceToNumber(item.preco)).toFixed(2)}</div>
+                    <button onClick={() => removeItem(item.id)} className="remove-item">Remover</button>
+                  </div>
                 </div>
               </div>
             </div>

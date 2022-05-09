@@ -34,7 +34,7 @@ export const ProductDetail: React.FunctionComponent<DataProdProps> =({dataProd})
         <h1>Descrição</h1>
         <h2>{product.description}</h2> 
         <div className='cart'>
-          <button onClick={() => cartHandler(product.title, product.price, product.id)}>+</button>
+          <button onClick={() => cartHandler(product.title, product.price, product.id, product.image)}>+</button>
           <h3>{cart.map(qty => qty.qty)}</h3>
           <button onClick={() => removeItem(product.id)}>-</button>
         </div>
