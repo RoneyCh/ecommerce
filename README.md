@@ -1,2 +1,2 @@
 # Ecommerce
-Simple ecommerce project using react / currently in progress 
+Simple ecommerce project using react
