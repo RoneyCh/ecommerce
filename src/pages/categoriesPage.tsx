@@ -9,7 +9,7 @@ export const CategoriesPage: React.FunctionComponent<CategoriesPageProps> = ({da
   return (
     <div>
         <nav className="container">
-          <h1>Categorias</h1>
+          <h1>Categories</h1>
           <ul className="menu-container">
             {dataCat.map((cat: string) => (
               <li className="categories">

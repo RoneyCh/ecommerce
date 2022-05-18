@@ -16,12 +16,15 @@ export const Nav: React.FC = () => {
       <div className="logo">
         <img alt="" src="https://images.pexels.com/photos/1337380/pexels-photo-1337380.jpeg?cs=srgb&dl=pexels-magda-ehlers-1337380.jpg&fm=jpg" />
       </div>
-      <input placeholder="O que está procurando?" type="text" />
-      <div style={{display:'flex'}}>
+      <input placeholder="What are you looking for?" type="text" />
+      <div></div>
+      <div></div>
+      <div className='last-items'>
       <div className="nav-links" id={showHamburger ? "hidden" : ""}> 
         <Link to={"/"}>Home</Link>
-        <Link to={"/categorias"}>Categorias</Link>
+        <Link to={"/categorias"}>Categories</Link>
       </div>
+
       <div className="cart-link">
           <Link to={"/carrinho"}>
             <FontAwesomeIcon icon={faShoppingCart} />

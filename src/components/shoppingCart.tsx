@@ -27,10 +27,10 @@ export const ShoppingCart: React.FC = () => {
                   <div>{item.nome}</div>
                 </div>
                 <div> 
-                  <div>Quantidade: {item.qty}</div>
+                  <div>Quantity: {item.qty}</div>
                   <div>  
                     <div>$ {(item.qty * priceToNumber(item.preco)).toFixed(2)}</div>
-                    <button onClick={() => removeItem(item.id)} className="remove-item">Remover</button>
+                    <button onClick={() => removeItem(item.id)} className="remove-item">Remove</button>
                   </div>
                 </div>
               </div>
@@ -42,10 +42,10 @@ export const ShoppingCart: React.FC = () => {
       ))} 
       <div>{cart.length > 1 ? (
         <><div className="total-value">Total: R$ {totalValue.toFixed(2)}</div><div className="btns-cart">
-          <button className="btn-clear" onClick={() => clearCart()}>Limpar carrinho</button>
-          <button className="btn-buy" onClick={() => buyMessage()}>Comprar</button>
+          <button className="btn-clear" onClick={() => clearCart()}>Clear cart</button>
+          <button className="btn-buy" onClick={() => buyMessage()}>Buy</button>
         </div></>
-      ): 'O carrinho está vazio'}
+      ): 'The cart is empty'}
       </div>
       
     </div>

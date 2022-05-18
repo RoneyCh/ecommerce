@@ -89,6 +89,9 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     //nav
+    .last-items {
+            display: flex;
+        }
     .heading {
         padding: 0.5rem ;
         color: white;
@@ -315,6 +318,11 @@ export const GlobalStyle = createGlobalStyle`
         //nav
         .nav-links {
             display: none;
+        }
+        .last-items {
+            justify-content: flex-end;
+            align-items: flex-end;
+            align-self: flex-end;
         }
         .toggle-btn {
             display: flex;
