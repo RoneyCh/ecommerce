@@ -52,9 +52,6 @@ export const ProductListPage: React.FC<DataProdProps> = ({
                   />
                   <div>
                     <div className="prod-title">{prod.title}</div>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    </p>
                   </div>
                 </div>
               </Link>

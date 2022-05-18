@@ -42,7 +42,7 @@ export const GlobalStyle = createGlobalStyle`
         display: inline; 
         &:hover {
             transition: all 1s ease;
-            color: red;
+            color: blue;
         }
     }
     .home-left {
@@ -92,7 +92,7 @@ export const GlobalStyle = createGlobalStyle`
     .heading {
         padding: 0.5rem ;
         color: white;
-        background: linear-gradient(to bottom, #B22222, #A52A2A);
+        background: black;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -100,6 +100,7 @@ export const GlobalStyle = createGlobalStyle`
         z-index: 999;
         top: 0;
         width: 100vw;
+        height: 4rem;
         img {
             width: 50px;
         }
@@ -162,7 +163,6 @@ export const GlobalStyle = createGlobalStyle`
         align-items: flex-start;
         flex-wrap: wrap;
         
-        
     } 
     .prod-img {
         width: 7rem;
@@ -196,7 +196,7 @@ export const GlobalStyle = createGlobalStyle`
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
-        width: 500px;
+        width: 300px;
     }
 
     .preco {
@@ -323,7 +323,7 @@ export const GlobalStyle = createGlobalStyle`
             transition: all 0.5s ease;
             padding: 0.5rem;
             border: none;
-            background-color: #E46161;
+            background-color: black;
             color: white;
         }
         h3 {
@@ -337,11 +337,11 @@ export const GlobalStyle = createGlobalStyle`
         #hidden {
             position: absolute;
             right: 0;
-            top: 5.3rem;
-            height: 12rem;
-            width: 10rem;
+            top: 3.9rem;
+            height: 8rem;
+            width: 9rem;
             font-size: large;
-            background: linear-gradient(to bottom, #B22222, #A52A2A);
+            background: black;
             flex-direction: column;
             justify-content: start;
             transition: all 0.5s ease;
@@ -392,6 +392,12 @@ export const GlobalStyle = createGlobalStyle`
             font-size: 1.9rem;
             }
         }
+    }
+    .prod-title {
+        white-space: normal;
+        overflow: hidden;
+        width: 200px;
+        height: 100px;
     }
     //shopping cart
     .items-cart {
